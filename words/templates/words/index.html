@@ -150,12 +150,12 @@
             <th>Sentences</th>
           </tr>
         </thead>
-        {% for word, info in words %}
+        {% for key, word in words %}
         <tr>
           <th class="row">{{ forloop.counter }}</th>
           <td>{{ word }}</td>
-          <td>{{ info.0 }}</td>
-          <td>{{ info.1|join:", " }}</td>
+          <td>{{ word.frequency }}</td>
+          <td>{{ word.sentences|join:", " }}</td>
         </tr>
       {% endfor %}
       </table>

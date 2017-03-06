@@ -2,7 +2,7 @@ from django.urls import reverse
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from words.word import Word
+from words.word import Concordance
 
 
 def index(request):
@@ -24,9 +24,9 @@ def index(request):
 
         context = {"words": []}
         if data_file:
-            context["words"] = Word(
+            context["words"] = Concordance(
                 data_file.read().decode("utf-8")).concordance()
         elif data:
-            context["words"] = Word(data).concordance()
+            context["words"] = Concordance(data).concordance()
 
     return render(request, template, context)
