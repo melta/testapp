@@ -1,0 +1,5 @@
+/.vagrant
+db.sqlite3
+logs/
+
+
