@@ -2,7 +2,7 @@ from django.urls import reverse
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from words.word import Concordance
+from words.concordance import Concordance
 
 
 def index(request):
